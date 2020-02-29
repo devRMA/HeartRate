@@ -32,7 +32,20 @@ public class HeartRates {
         if ((mesAtual >= mesNasc) && (diaAtual >= diaNasc)) {
             idadeTotal++;
         }
-
         return idadeTotal;
+    }
+    public int getFrequenciaCardiacaPorMinutoMaxima(){
+        return 220 - getIdade();
+    }
+    /**
+     * @return Retorna o valor mínimo e o valor máximo da frequência alvo
+     */
+    public int[] getFrequenciaAlvo(){
+        int[] frequenciaAlvo = new int[2];
+        int minimo = (int) (getFrequenciaCardiacaPorMinutoMaxima() * 0.5);
+        int maximo = (int) (getFrequenciaCardiacaPorMinutoMaxima() * 0.85);
+        frequenciaAlvo[0] = minimo;
+        frequenciaAlvo[1] = maximo;
+        return frequenciaAlvo;
     }
 }
