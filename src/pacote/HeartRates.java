@@ -48,4 +48,12 @@ public class HeartRates {
         frequenciaAlvo[1] = maximo;
         return frequenciaAlvo;
     }
+    //Gets
+    public String getNome() {
+        return nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
 }
